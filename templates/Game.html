@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pole Dance Game</title>
+</head>
+<body>
+    <h1>Selected Tricks:</h1>
+    <ul>
+        {% for trick in tricks %}
+        <li>{{ trick }}</li>
+        {% endfor %}
+    </ul>
+    <form method="post">
+        <label>Did you slay?</label>
+        <input type="radio" id="yes" name="success" value="yes" required>
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="success" value="no" required>
+        <label for="no">No</label>
+        <br>
+        <label>Continue?</label>
+        <input type="radio" id="yes_continue" name="continue" value="yes" required>
+        <label for="yes_continue">Yes</label>
+        <input type="radio" id="no_continue" name="continue" value="no" required>
+        <label for="no_continue">No</label>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
